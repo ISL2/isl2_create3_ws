@@ -6,8 +6,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     joy_launch = IncludeLaunchDescription(
       PythonLaunchDescriptionSource([os.path.join(
-         get_package_share_directory('launch_tutorial'), 'launch'),
-         '/turtlesim_world_1.launch.py'])
+         get_package_share_directory('bringup'), 'launch'),
+         '/joy_launch.py'])
       )
     return LaunchDescription([
         joy_launch

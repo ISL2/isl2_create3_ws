@@ -23,13 +23,11 @@ def generate_launch_description():
         ),
         Node(
             package='joy',
-            namespace='joy',
             executable='joy_node',
             name='joy_input'
         ),
         Node(
             package='teleop_twist_joy',
-            namespace='joy',
             executable='teleop_node',
             name='joy_twist',
             parameters=[config_filepath]
