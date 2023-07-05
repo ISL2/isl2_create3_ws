@@ -9,10 +9,20 @@ import os
 
 def generate_launch_description():
     joy_launch = IncludeLaunchDescription(
-      PythonLaunchDescriptionSource([os.path.join(
-         get_package_share_directory('bringup'), 'launch'),
-         '/joy.launch.py'])
-      )
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('bringup'), 'launch'),
+            '/joy.launch.py'
+            ])
+        )
+
+    camera_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('bringup'), 'launch'),
+            '/camera.launch.py'
+            ])
+        )
+
     return LaunchDescription([
-        joy_launch
+        joy_launch,
+        camera_launch,
     ])
