@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import setup
 
-package_name = 'bringup'
+package_name = 'isl2_create3_bringup'
 
 setup(
     name=package_name,

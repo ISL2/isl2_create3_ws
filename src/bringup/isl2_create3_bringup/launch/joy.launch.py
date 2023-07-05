@@ -26,7 +26,14 @@ def generate_launch_description():
         }]
     )
 
+    joy_controller = Node(
+        package='isl2_create3_joy_control',
+        executable='joy_controller',
+        name='joy_controller'
+    )
+
     return LaunchDescription([
         joy_input_node,
         joy_twist_node,
+        joy_controller,
     ])
