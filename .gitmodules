@@ -1,0 +1,6 @@
+[submodule "src/bringup/isl2_create3_bringup"]
+	path = src/bringup/isl2_create3_bringup
+	url = https://www.github.com/ISL2/isl2_create3_bringup.git
+[submodule "src/controller/isl2_create3_joy_control"]
+	path = src/controller/isl2_create3_joy_control
+	url = https://www.github.com/ISL2/isl2_create3_joy_control
