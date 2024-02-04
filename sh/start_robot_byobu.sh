@@ -74,6 +74,7 @@ byobu_bash CAMERA 1 CAM_SV "sh /home/khadas/camera_launch/1-launch_rkisp_demo.sh
 echo "Waiting Camera Driver to Spinning Up"
 sleep 3
 byobu_bash CAMERA 2 GSCAM "ros2 launch isl2_create3_bringup cam.launch.xml"
+byobu_bash CAMERA 3 THROTTLER "ros2 run topic_tools throttle messages /v4l/camera/image_raw/compressed 5 /image/compressed"
 
 # open_byobu_session CORE
 # byobu_bash RVIZ 0 rviz "rviz -d ~/obodroid/sr1/sr1_robot/src/bringup/sr1_bringup/rviz/obo_default.rviz"
